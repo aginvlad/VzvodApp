@@ -165,9 +165,6 @@ body {
 }
 
 .title .title-content {
-  display: block;
-  width: 40rem;
-  margin: auto;
   text-align: center;
   padding-top: 2rem;
   font-size: 5rem;
@@ -211,40 +208,10 @@ body {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1100px) {
-  .title-content {
-    margin: 0 !important;
-    width: 40rem !important;
-  }
-
-  .title-content h1 {
-    margin-left: 4rem;
-  }
-}
-
 @media screen and (max-width: 780px) {
-  .title {
-    width: calc(100% - 30px);
+  .adv {
+    margin-left: 0 !important;
     text-align: center;
-    -webkit-transform: translateX(-3%);
-    transform: translateX(-3%);
-  }
-
-  .title-content {
-    display: inline-block !important;
-    width: 45rem !important;
-  }
-
-  .title-content h1 {
-    margin-left: 8rem;
-  }
-
-  .captains {
-    margin: 0 auto;
-    margin-top: 5rem;
-    position: static !important;
-    display: block;
-    width: 35rem;
   }
 }
 
@@ -259,7 +226,7 @@ body {
   padding: 2rem 2rem 2rem 1rem;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  min-width: 39rem;
+  width: 39rem;
   cursor: pointer;
 }
 
@@ -318,7 +285,7 @@ body {
 }
 
 .duty {
-  background-color: lime;
+  background-color: #0be881;
   position: relative;
 }
 
@@ -343,7 +310,7 @@ body {
 .duty:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-  background-color: #80ff80;
+  background-color: #7af9be;
 }
 
 @media screen and (max-width: 780px) {
@@ -354,11 +321,55 @@ body {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .card--captain {
+    width: 35rem;
+  }
+
+  .card--captain:hover {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  .card:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .captains {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
+  width: 39rem !important;
   right: 0;
   background-color: #badc58;
+}
+
+@media screen and (max-width: 1100px) {
+  .captains {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .captains {
+    width: 35rem !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .captains {
+    width: 35rem !important;
+  }
 }
 
 .members {
